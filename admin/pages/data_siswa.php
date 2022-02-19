@@ -536,7 +536,17 @@ $row  = mysqli_query($conn,"SELECT * FROM siswa");
 
             <div class="form-group">
               <label>ID_Kelas</label>
-              <input type="number" name="id_kelas" id="id_kelas" class="form-control" placeholder="Enter ID_Kelas">
+              <select name="id_kelas" id="id_kelas" class="form-control select2" style="width:100%;">
+                <option value="Not Selected">Not Selected</option>
+                <?php
+                $conn1 = mysqli_connect('localhost','root','','pembayaran_spp');                
+                $kelas = mysqli_query($conn1, "SELECT * FROM kelas");
+                while($r = mysqli_fetch_assoc($kelas)){                
+                ?>
+                <option value="<?php echo $r['id_kelas'];?>"><?php echo $r['nama_kelas'] . " | "
+                            . $r['jurusan']; ?></option>
+                <?php } ?>
+              </select>
             </div>
 
             <div class="form-group">
@@ -617,7 +627,17 @@ $row  = mysqli_query($conn,"SELECT * FROM siswa");
 
             <div class="form-group">
               <label>ID_Kelas</label>
-              <input type="number" name="id_kelas" id="id_kelas" class="form-control" placeholder="Enter ID_Kelas">
+              <select name="id_kelas" id="id_kelas" class="form-control select2" style="width:100%;">
+                <option value="Not Selected">Not Selected</option>
+                <?php
+                $conn1 = mysqli_connect('localhost','root','','pembayaran_spp');                
+                $kelas = mysqli_query($conn1, "SELECT * FROM kelas");
+                while($r = mysqli_fetch_assoc($kelas)){                
+                ?>
+                <option value="<?php echo $r['id_kelas'];?>"><?php echo $r['nama_kelas'] . " | "
+                            . $r['jurusan']; ?></option>
+                <?php } ?>
+              </select>
             </div>
 
             <div class="form-group">
