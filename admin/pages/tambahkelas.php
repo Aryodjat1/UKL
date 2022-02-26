@@ -9,7 +9,7 @@ if (isset($_POST['tambahkelas'])) {
     $angkatan = $_POST['angkatan'];
 
 
-    $query_run = mysqli_query($conn, "INSERT INTO kelas (id_kelas, nama_kelas, jurusan, angkatan, level) VALUES ('$id_kelas', '$nama_kelas', '$jurusan', '$angkatan')");
+    $query_run = mysqli_query($conn, "INSERT INTO kelas (id_kelas, nama_kelas, jurusan, angkatan) VALUES ('$id_kelas', '$nama_kelas', '$jurusan', '$angkatan')");
 
     if ($query_run) {
         echo '<script> alert("Data Tersimpan");</script>';

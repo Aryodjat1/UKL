@@ -297,6 +297,7 @@ $row = mysqli_query($conn,"SELECT * FROM siswa");
                   <tbody>
                   <?php
                     $no = 1;
+                    
                     while ($data = mysqli_fetch_array($row)) {
                       $ceknisn = $data['nisn'];                      
                       ?>
@@ -321,7 +322,7 @@ $row = mysqli_query($conn,"SELECT * FROM siswa");
                       </td>
                       <td class="align-middle text-center">
                         <p class="text-xs font-weight-bold mb-0"><?php echo $data['nis']?></p>
-                      </td> 
+                      </td>                     
                       <td class="align-middle text-center text-sm">
                       <span class="text-secondary font-weight-bold text-xs">
                           <?php echo $data['alamat']?>
